@@ -77,7 +77,7 @@ nav a:hover {
 }
 
 #hero-msg h1 {
-    text-shadow: 0px 0px 10px #B0A990;
+    text-shadow: 0px 0px 10px #396e94;
 }
 
 #hero-msg h1, #hero-msg h4 {
@@ -100,6 +100,11 @@ h2 {
     font-family: "Kaushan Script", 'Brush Script MT', cursive;
     color: #1E2F23;
     margin: 0;
+}
+
+.rivers-grid h2 {
+    color: #B0A990;
+    text-shadow: 3px 3px 5px #011936;
 }
 
 h4 {
@@ -130,12 +135,77 @@ h4 {
     grid-template-columns: repeat(10, 1fr);
 }
 
+.rivers-grid {
+    margin: 5em;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
 main section {
     text-align: center;
 }
 
 main section img {
     box-sizing: border-box;
+}
+
+.river1, .river2, .river3, .more-rivers {
+    margin: 2em;
+    padding: 2em;
+    grid-column: 2/10;
+    background-color: #1E2F23;
+    border: 5px solid #011936;
+}
+
+.river1-img, .river2-img, .river3-img, .more-rivers-img {
+    width: 400px;
+    margin: 1em;
+    border: 10px groove #B0A990;
+    box-shadow: 3px 3px 10px #011936;
+}
+
+.river1-img:hover, .river2-img:hover, .river3-img:hover, .more-rivers-img:hover {
+    transform: scale(1.3);
+}
+
+.river1-img, .river3-img {
+    float: left;
+}
+
+.river2-img, .more-rivers-img {
+    float: right;
+}
+
+.more-rivers-img {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 400px;
+    height: max-content;
+}
+
+.more-rivers1 {
+    grid-column: 1/3;
+    grid-row: 1/3;
+    width: 200px;
+}
+
+.more-rivers2 {
+    grid-column: 2/4;
+    grid-row: 1/3;
+    width: 200px;
+}
+
+.more-rivers3 {
+    grid-column: 2/4;
+    grid-row: 2/4;
+    width: 200px;
+}
+
+.more-rivers4 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    width: 200px;
 }
 
 .rivers-card, .camping-card, .rapids-card {
