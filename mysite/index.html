@@ -9,47 +9,62 @@
 </head>
 
 <body>
-    <div id="content">
-        <header>
+    <header>
+    <!-- <div class="content"> -->
+        <div id="logo_area">
             <a id="logo_link" href="index.html"> 
                 <img class="logo" src="images/logo1b.png" alt="TL Site Logo">
             </a>
-            <h1>TL Dev & Design</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="projects.html">Projects</a>
-                <a href="aboutme.html">About Me</a>
-                <a href="site-plan.html">Site Plan</a>
-            </nav>
-        </header>
+            <h1>Dev & Design</h1>
+        </div>
+        
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="aboutme.html">About Me</a>
+            <a href="site-plan.html">Site Plan</a>
+        </nav>
+    <!-- </div> -->
+    </header>
 
+    <div class="content">
         <div  id="hero">
             <div id="hero-banner">
                 <img src="images/code_banner1-opt.jpg" alt="web dev code banner">
             </div>
 
-            <h1>Home</h1>
+            <!-- <h1>Home</h1> -->
         </div>
 
-        <main>
-            <section>
-                <h2>Welcome to my professional site:</h2>
-
-                <p>a portfolio of my dev & design work and a log of my learning journey in tech that winds through programming, web development, web design, data analytics, data science, AI, cloud computing, and more!</p>
-            </section>
-            <section>
+        <main class="home-grid">
+            <div id="home_headline1">
+                <h2>Home</h2>
+            </div>    
+            <div id="home_p1">
+                <p> Welcome to my professional site: a portfolio of my dev & design work and a log of my learning journey in tech that winds through programming, web development, web design, data analytics, data science, AI, cloud computing, and more!
+                </p>
+            </div>
+            <div id="home_main_img">
                 <img src="images/code_screen-vert-opt.jpg" alt=" vertical image of programming on a laptop">
-
+            </div>
+            <div id="home_headline2_bg"></div>
+            <div id="home_headline2">
+                <a href="projects.html"><h2>See My Work</h2></a>
+            </div>
+            <div id="home_p2_bg"></div>
+            <div id="home_p2">
                 <p>There's not much to see here for now, but I hope to fill it up with cool projects I'm proud to showcase to potential employers, prospective clients, or anybody else interested in watching me progress professionally in whatever fields of tech and software I find myself studying and exploring.</p>
-            </section>
+            </div>
         </main>
 
         <div class="button-boxes">
-            <a class="projects-button" href="projects.html"> My Projects </a>
-            <a class="aboutme-button" href="aboutme.html"> About Me </a>
+            <a class="button" href="projects.html"> My Projects </a>
+            <a class="button" href="aboutme.html"> About Me </a>
         </div>
+    </div>
 
-        <footer>
+    <footer>
+        <div class="content">
             <p>TL Dev & Design &copy; 2023 - Travis Lee</p>
             <p><a href="projects.html">Projects</a></p>
             <p><a href="aboutme.html">About Me</a></p>
@@ -72,7 +87,7 @@
                     <img src="images/social-icons/Instagram_Glyph_White.png" alt="instagram icon">
                 </a>
             </div>
-        </footer>
-    </div>    
+        </div>
+    </footer>
 </body>
 </html>
