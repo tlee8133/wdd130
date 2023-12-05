@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TL Dev & Design | Portfolio Site | Projects</title>
+    <link type="text/css" rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
@@ -22,8 +23,8 @@
             </nav>
         </header>
 
-        <div id="hero">
-            <div id="hero-banner2">
+        <div class="hero">
+            <div class="hero-banner2">
                 <img src="images/code_banner2-opt.jpg" alt="web dev code banner 2">
             </div>
 
@@ -37,7 +38,9 @@
         <main>
             <section class="project-left">
                 <!-- If possible, might embed Python code instead of img -->
-                <img src="images/magic_number_game-opt.png" alt="">
+                <div class="project-left-imagery">
+                    <img src="images/magic_number_game-opt.png" alt="Number Guessing Game screenshot">
+                </div>
                 <h3>Number Guessing Game</h3>
                 <p>This is a simple Number Guessing Game program I wrote for a Python class. It uses a function from the Math library in Python to generate a random number. It then prompts the user to guess it, giving "higher" or "lower" hints until the number is correct.</p>
             </section>
@@ -45,11 +48,15 @@
                 <!-- If possible, might embed Python code instead of img -->
                 <h3>Wordle-Like Game</h3>
                 <p>This is another program from my Python class. We were asked to create a Wordle-like game based on some basic rules provided and then to add an extra feature or two. My version has 2 modes: unlimited guesses and limited guesses. This is one I'd still like to play around with when I get the chance, since I didn't know how to add a list of words to pick from at the time.</p>
-                <img src="images/wordle_game-opt.png" alt="">
+                <div class="project-right-imagery">
+                    <img src="images/wordle_game-opt.png" alt="Wordle-Like Game screenshot">
+                </div>
             </section>
             <section class="project-left">
                 <!-- Link image? -->
-                <img src="images/wwr-site-screen-opt.png" alt="Rafting site screenshot">
+                <div class="project-left-imagery">
+                    <img src="images/wwr-site-screen-opt.png" alt="Rafting site screenshot">
+                </div>
                 <h3>"Dry Oar" Rafting Site</h3>
                 <p>This is a site from my Web Development class for a made-up white-water rafting tour company. We were given the basic structure of the home page and had to fill it in with more content and make our own design choices, such as colors and fonts, and then make an additional page of content as well as a contact page with a basic form.</p>                
             </section>
@@ -57,7 +64,29 @@
                 <!-- This one will be a slideshow gallery eventually -->
                 <h3>Excel Dashboard Project</h3>
                 <p>This is an Excel project from a Business Applications class I took from BYU PathwayConnect and BYU-Idaho. I wanted to make something that could benefit the company I was working for at the time, since I specifically saw a need for something like this in my former role as a Data Specialist working in Fleet Logistics, where part of my role was to monitor the company's drivers and report on any incidents. It is a Dashboard with a log of the driving incidents in each of the company's branches, and it was capable of searching for events by date, branch, driver, category, type of event, or severity.</p>
-                <img src="images/excel-project1.png" alt="excel Dashboard pg 1">                
+                <!-- The four columns -->
+                <div class="project-right-imagery">
+                    <div class="row">
+                        <div class="column">
+                        <img src="images/excel-project1.png" alt="Excel Project 1" style="width:100%" onclick="myFunction(this);">
+                        </div>
+                        <div class="column">
+                        <img src="images/excel-project2.png" alt="Excel Project 2" style="width:100%" onclick="myFunction(this);">
+                        </div>
+                        <div class="column">
+                        <img src="images/excel-project3.png" alt="Excel Project 3" style="width:100%" onclick="myFunction(this);">
+                        </div>
+                        <div class="column">
+                        <img src="images/excel-project4.png" alt="Excel Project 4" style="width:100%" onclick="myFunction(this);">
+                        </div>
+                    </div>
+                    
+                    <div class="container">
+                        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                        <img id="expandedImg" style="width:100%">
+                        <div id="imgtext"></div>
+                    </div>     
+                </div>        
             </section>
 
             <!-- Formats just in case I need these later for other projects -->
@@ -71,6 +100,17 @@
                 <p></p>
                 <img src="" alt="">               
             </section> -->
+
+            <!-- JS for Tab Image Gallery Component -->
+            <script>
+                function myFunction(imgs) {
+                  var expandImg = document.getElementById("expandedImg");
+                  var imgText = document.getElementById("imgtext");
+                  expandImg.src = imgs.src;
+                  imgText.innerHTML = imgs.alt;
+                  expandImg.parentElement.style.display = "block";
+                }
+            </script>
 
         </main>
 
