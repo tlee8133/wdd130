@@ -100,14 +100,17 @@ nav a:hover {
 
 .hero h1 {
     color: #EFEFEF;
+    padding: 10px;
+}
+
+.hero-text {
     text-align: center;
     text-shadow: 3px 3px 5px #3168d8;
     padding: 10px;
     position: absolute;
-    top: 40%;
-    left: 40%;
+    top: 35%;
+    left: 45%;
     transform: translate(-50%, -50%);
-    color: #EFEFEF;
 }
 
 #projects-intro {
